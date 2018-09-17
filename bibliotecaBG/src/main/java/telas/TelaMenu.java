@@ -36,7 +36,7 @@ public class TelaMenu extends javax.swing.JFrame {
 
         jMenu1.setText("Arquivo");
 
-        jMenuItem1.setText("Cadastro Usuario");
+        jMenuItem1.setText("Cadastro Usuarios BG");
         jMenu1.add(jMenuItem1);
 
         jMenuBar1.add(jMenu1);
