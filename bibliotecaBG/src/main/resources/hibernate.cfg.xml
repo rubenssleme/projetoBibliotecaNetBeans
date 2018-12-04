@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- ===================================Configurações de Conexão com o Banco de Dados SQlServer================-->
+       <!-- <property name="hibernate.connection.driver_class">net.sourceforge.jtds.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:jtds:sqlserver://localhost/bdBgHibernate</property>
+        <property name="hibernate.connection.username">sa</property>
+        <property name="hibernate.connection.password">1234567</property>-->
+    
+        <!-- ===================================Configurações de Conexão com o Banco de Dados PostGreSql -->
+         <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/bdBgHibernate</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">1234567</property>
+        <!-- Pool de Conexões -->
+        <property name="connection.pool_size">1</property>
+        <!-- SQL dialect -->
+       <!-- <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>-->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+        <!-- Gerenciamento do Contexto das Sessões -->
+        <property name="current_session_context_class">thread</property>
+        <!-- Cache de Segundo Nível -->
+        <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>
+        <!-- Mostra as SQLs Geradas -->
+        <property name="show_sql">true</property>
+        <!-- Cria as tabelas do banco de dados -->
+        <property name="hbm2ddl.auto">validate</property>
+        <!--<property name="hbm2ddl.auto">validate</property>-->
+        <!-- Mapeamento das entidades -->
+        <mapping class="br.com.bg.comhibernate.dominio.Cliente"/>
+        </session-factory>
+</hibernate-configuration>
